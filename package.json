@@ -2,7 +2,7 @@
   "name": "new-test",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://yuriev-yuriy.github.io/USENSE-test",
+  "homepage": "https://yuriev-yuriy.github.io/usense-test",
   "dependencies": {
     "@testing-library/jest-dom": "^5.13.0",
     "@testing-library/react": "^11.2.7",

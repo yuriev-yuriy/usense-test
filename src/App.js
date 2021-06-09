@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { interval } from 'rxjs';
 import { startWith } from 'rxjs/operators';
 import logo from './logo.svg';
@@ -7,6 +7,7 @@ import './App.css';
 function App() {
   const [output, setOutput] = useState('');
   const [style, setStyle] = useState({});
+  const [disable, setDisable] = React.useState(false);
   const symb = 'abcdefghijklmnopqrstuvwxyz0123456789';
 
   const getValue = () => {
@@ -15,6 +16,7 @@ function App() {
     // let newStr = 'fa7af';
     // раскомментировать стр 17 и закомментировать стр 18-20 чтоб проверить как применяются стили к паллиндрому
     // let newStr = '78945';
+    setDisable(true);
     for (let i = 0; i < 5; i++) {
       newStr += symb[Math.floor(Math.random() * (symb.length - 1))];
     }
@@ -31,6 +33,7 @@ function App() {
       setOutput(newStr);
       console.log('pallindrome');
     } else {
+      setStyle({ color: 'yellow' });
       setOutput(newStr);
       console.log('common str');
     }
@@ -45,6 +48,7 @@ function App() {
         </div>
         <button
           className="number"
+          disabled={disable}
           onClick={() => {
             observable$.subscribe(getValue);
           }}
