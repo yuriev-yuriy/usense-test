@@ -7,6 +7,22 @@
   pointer-events: none;
 }
 
+.number {
+  width: 150px;
+  height: 40px;
+  border: 1px solid pink;
+  color: lightseagreen;
+  font-size: 30px;
+}
+
+.str {
+  width: 150px;
+  height: 40px;
+  border: 1px solid pink;
+  color: greenyellow;
+  font-size: 30px;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
