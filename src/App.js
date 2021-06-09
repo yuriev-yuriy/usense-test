@@ -10,11 +10,12 @@ function App() {
   const [disable, setDisable] = React.useState(false);
   const symb = 'abcdefghijklmnopqrstuvwxyz0123456789';
 
+  const observable$ = interval(3000).pipe(startWith(output));
   const getValue = () => {
     let newStr = '';
-    // раскомментировать стр 15 и закомментировать стр 18-20 чтоб проверить как применяются стили к паллиндрому
+    // раскомментировать стр 17 и закомментировать стр 20-23 чтоб проверить как применяются стили к паллиндрому
     // let newStr = 'fa7af';
-    // раскомментировать стр 17 и закомментировать стр 18-20 чтоб проверить как применяются стили к паллиндрому
+    // раскомментировать стр 19 и закомментировать стр 20-23 чтоб проверить как применяются стили к паллиндрому
     // let newStr = '78945';
     setDisable(true);
     for (let i = 0; i < 5; i++) {
@@ -38,7 +39,6 @@ function App() {
       console.log('common str');
     }
   };
-  const observable$ = interval(3000).pipe(startWith(output));
 
   return (
     <div className="App">
